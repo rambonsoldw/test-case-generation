@@ -193,13 +193,7 @@ def flatten_pageindex_root(pi_obj, max_items=400, default_source="UNKNOWN.json")
             if isinstance(doc, dict):
                 src = _doc_src(doc, default_source)
                 root_inherited = _pick_start_index(doc)
-                roots = doc.get("nodes") or doc.get("children")
-                if isinstance(roots, list) and roots:
-                    for r in roots:
-                        if isinstance(r, dict):
-                            _walk(r, src, inherited_page=root_inherited)
-                else:
-                    _walk(doc, src, inherited_page=root_inherited)
+                _walk(doc, src, inherited_page=root_inherited)
             elif isinstance(doc, str):
                 out.append({
                     "page": -1, "original_page": -1,
@@ -209,13 +203,7 @@ def flatten_pageindex_root(pi_obj, max_items=400, default_source="UNKNOWN.json")
     elif isinstance(pi_obj, dict):
         src = _doc_src(pi_obj, default_source)
         root_inherited = _pick_start_index(pi_obj)
-        roots = pi_obj.get("nodes") or pi_obj.get("children")
-        if isinstance(roots, list) and roots:
-            for r in roots:
-                if isinstance(r, dict):
-                    _walk(r, src, inherited_page=root_inherited)
-        else:
-            _walk(pi_obj, src, inherited_page=root_inherited)
+        _walk(pi_obj, src, inherited_page=root_inherited)
 
     if max_items and len(out) > max_items:
         out = out[:max_items]
@@ -306,29 +294,77 @@ def compute_and_write_ingestion_metrics(
 
     print(f"[INFO] Wrote ingestion metrics CSV to: {csv_path}")
 
-# ---------------- Tagging prompts  ----------------
+# ---------------- Tagging prompts ----------------
 SYSTEM_TAG_GLOBAL = (
-    "You are tagging a policy/handbook using ONLY the nodes provided.\n "
-    "Output concise, consumer-friendly tags.\n "
-    "Each tag is a (key, value) pair where the value is a 1–2 word canonical TOPIC.\n "
-    "You MUST ground every tag in the excerpt text, but you MAY abstract wording\n "
-    "to a canonical topic (e.g., 'paid annual leave' → value 'annual leave').\n "
-    "Do NOT invent facts not supported by the excerpts. \n"
-    "Be sure to tag each node tree section AT LEAST ONCE \n"
-
+    "You are tagging a document using ONLY the node entries provided.\n"
+    "Goal: produce a HIGH-COVERAGE tag bank.\n"
+    "Rules:\n"
+    "- Output STRICT JSON only.\n"
+    "- Produce BETWEEN {min_tags} AND {max_tags} candidates.\n"
+    "- Every candidate MUST be grounded in exactly one provided node entry.\n"
+    "- key = a facet (one word or snake_case), value = a 1-2 word canonical topic.\n"
+    "- value must be 1-2 words ONLY (no commas, no long phrases).\n"
+    "- The same (key,value) pair may appear for multiple sections if both cover that topic, but must not appear twice for the same section.\n"
+    "- Prioritise coverage: tag EVERY entry at least once before adding multiple tags to any single entry.\n"
+    "- Avoid generic values: policy, handbook, procedure, general, overview, introduction.\n"
     "Example keys (adapt to this document): {example_keys}\n"
     "Example values (adapt to this document): {example_values}\n"
 )
 
 USER_TAG_GLOBAL_TEMPLATE = (
     "FACETS to use as keys (choose what fits): {example_keys}\n\n"
-    "NODE TREE ENTRIES (JSON):\n{index_json}\n\n"
-    "Return STRICT JSON exactly like the format below:\n"
+    "DOCUMENT NODE ENTRIES (JSON):\n{index_json}\n\n"
+    "Each entry has the format: {{\"original_page\": N, \"source_file\": \"...\", \"section\": \"...\", \"quote\": \"...\"}}\n\n"
+    "Return STRICT JSON exactly like:\n"
     "{{\"candidates\":[{{"
-    "\"key\":\"process\",\"value\":\"claims\",\"section\":\"Claims / Lodgement\",\"original_page\":12,"
-    "\"source_file\":\"ABCD Handbook.pdf\",\"quote\":\"verbatim excerpt 220-480 chars grounding the tag\","
-    "\"score\":0.86}}]}}"
+    "\"key\":\"claims_process\","
+    "\"value\":\"lodgement\","
+    "\"section\":\"Claims / Lodgement\","
+    "\"original_page\":12,"
+    "\"source_file\":\"ABCD Handbook.pdf\","
+    "\"quote\":\"verbatim excerpt 220-480 chars grounding the tag\","
+    "\"score\":0.86}}]}}\n\n"
+    "IMPORTANT: Produce between {min_tags} and {max_tags} candidates. The same (key,value) may repeat across different sections."
 )
+
+# ---------------- Tagging helpers ----------------
+BANNED_VALUES = {"policy","handbook","procedure","general","overview","introduction"}
+
+def _is_good_value(v: str) -> bool:
+    v = (v or "").strip().lower()
+    if not v or v in BANNED_VALUES:
+        return False
+    if len(v.split()) > 2:
+        return False
+    if any(ch in v for ch in [",",";","/","(",")",":"]):
+        return False
+    return True
+
+_STOPWORDS = {
+    "the","a","an","and","or","to","of","in","on","for","with","at","by","from",
+    "is","are","was","were","be","been","being","as","it","this","that","these","those",
+    "policy","policies","procedure","procedures","process","processes","overview","introduction","general"
+}
+
+def _derive_value_1_2_words(section: str, quote: str) -> str:
+    def _pick(text: str) -> List[str]:
+        words = re.findall(r"[A-Za-z0-9]+", (text or "").lower())
+        words = [w for w in words if w and w not in _STOPWORDS]
+        return words
+
+    w = _pick(section)
+    if not w:
+        w = _pick(quote)
+    if not w:
+        return "topic"
+
+    val = " ".join(w[:2]).strip()
+    if not _is_good_value(val):
+        val1 = w[0].strip()
+        if _is_good_value(val1):
+            return val1
+        return "topic"
+    return val
 
 # ---------------- Tagging function ----------------
 def tag_document_global_with_llm(
@@ -336,12 +372,14 @@ def tag_document_global_with_llm(
     model: str,
     index_entries: List[Dict[str, Any]],
     industry: str,
-    debug: bool=False
+    debug: bool=False,
+    min_tags: int=20,
+    max_tags: int=40,
+    tag: str="tag_global"
 ) -> List[Dict[str, Any]]:
-    MAX_ENTRIES = 300
     MAX_QUOTE = 800
     compact_entries = []
-    for e in index_entries[:MAX_ENTRIES]:
+    for e in index_entries:
         compact_entries.append({
             "original_page": e.get("original_page", -1),
             "source_file": e.get("source_file", "document"),
@@ -350,38 +388,26 @@ def tag_document_global_with_llm(
         })
 
     index_json = json.dumps(compact_entries, ensure_ascii=False)
-    
-    # Customize prompt based on expert type
-        
+
     if "insurance" in industry:
-        doc_type = "insurance document"
-        customer_focus = "customers inquiring about insurance"
         example_keys = "coverage,exclusions,claims_process,premiums,deductibles,limitations"
         example_values = "comprehensive_motor_vehicle,windscreen_replacement,third_party_liability"
     elif "medical" in industry or "health" in industry:
-        doc_type = "medical/healthcare document"
-        customer_focus = "patients or healthcare professionals"
         example_keys = "diagnosis,treatment,medication,procedures,symptoms,contraindications"
         example_values = "acute_conditions,chronic_disease_management,dosage_guidelines"
     elif "math" in industry or "scientific" in industry:
-        doc_type = "mathematical/scientific document"
-        customer_focus = "students or researchers"
         example_keys = "theorems,formulas,proofs,definitions,applications,examples"
         example_values = "pythagorean_theorem,quadratic_equations,statistical_methods"
     elif "legal" in industry:
-        doc_type = "legal document"
-        customer_focus = "clients seeking legal guidance"
         example_keys = "rights,obligations,definitions,procedures,requirements,remedies"
         example_values = "statutory_rights,contractual_obligations,filing_procedures"
     elif "technical" in industry or "software" in industry or "engineer" in industry:
-        doc_type = "technical documentation"
-        customer_focus = "developers or technical users"
         example_keys = "features,configuration,api_methods,requirements,troubleshooting,security"
         example_values = "authentication_methods,data_structures,error_handling"
+    elif "education" in industry:
+        example_keys = "employment_type,leave_entitlements,training_requirements,professional_conduct,attendance,student_welfare,safety_security"
+        example_values = "casual_staff,annual_leave,mandatory_training,dress_code,absences,child_protection,emergency_procedures"
     else:
-        # Generic fallback
-        doc_type = "document"
-        customer_focus = "readers"
         example_keys = "main_topics,concepts,procedures,definitions,guidelines,requirements"
         example_values = "specific_subtopics,detailed_aspects,particular_cases"
 
@@ -389,15 +415,27 @@ def tag_document_global_with_llm(
         client,
         model=model,
         input=[
-            {"role":"system","content":SYSTEM_TAG_GLOBAL.format(example_keys = example_keys, example_values = example_values)},
-            {"role":"user","content":USER_TAG_GLOBAL_TEMPLATE.format(example_keys = example_keys, index_json=index_json)}
+            {"role":"system","content":SYSTEM_TAG_GLOBAL.format(
+                example_keys=example_keys,
+                example_values=example_values,
+                min_tags=min_tags,
+                max_tags=max_tags
+            )},
+            {"role":"user","content":USER_TAG_GLOBAL_TEMPLATE.format(
+                example_keys=example_keys,
+                index_json=index_json,
+                min_tags=min_tags,
+                max_tags=max_tags
+            )}
         ],
         response_format={"type":"json_object"},
         max_output_tokens=8192,
     )
-    data = parse_json_from_resp(rsp, debug=debug, tag="tag_global")
+    data = parse_json_from_resp(rsp, debug=debug, tag=tag)
 
     out: List[Dict[str, Any]] = []
+    seen: set = set()  # dedup per node: same KVP allowed across different nodes, blocked within the same node
+
     for c in (data.get("candidates") or []):
         key  = (c.get("key") or "").strip().lower()
         val  = (c.get("value") or "").strip().lower()
@@ -411,7 +449,12 @@ def tag_document_global_with_llm(
             sc = 0.0
         if not key or not val:
             continue
-
+        if not _is_good_value(val):
+            continue
+        node_key = (key, val, src, pg, sec)
+        if node_key in seen:
+            continue
+        seen.add(node_key)
         out.append({
             "page": pg,
             "source_file": src,
@@ -420,6 +463,121 @@ def tag_document_global_with_llm(
             "candidates": [{"key": key, "value": val, "score": sc}]
         })
     return out
+
+
+# ---------------- Batched tagging ----------------
+def tag_document_global_batched(
+    client: OpenAI,
+    model: str,
+    index_entries: List[Dict[str, Any]],
+    industry: str,
+    debug: bool=False,
+    batch_size: int=60
+) -> List[Dict[str, Any]]:
+    all_rows: List[Dict[str, Any]] = []
+    seen_global: set = set()  # dedup per node across batches
+
+    if not index_entries:
+        return []
+
+    batch_num = 0
+    for bi in range(0, len(index_entries), batch_size):
+        batch_num += 1
+        batch = index_entries[bi:bi+batch_size]
+        # Scale tag targets to batch size so LLM covers every entry
+        min_tags = len(batch)
+        max_tags = len(batch) * 3
+
+        rows = tag_document_global_with_llm(
+            client=client,
+            model=model,
+            index_entries=batch,
+            industry=industry,
+            debug=debug,
+            min_tags=min_tags,
+            max_tags=max_tags,
+            tag=f"tag_global_b{batch_num}"
+        )
+
+        for r in rows:
+            cand = (r.get("candidates") or [{}])[0]
+            key = (cand.get("key") or "").strip().lower()
+            val = (cand.get("value") or "").strip().lower()
+            src = (r.get("source_file") or "document").strip()
+            pg  = r.get("page", -1)
+            sec = (r.get("section") or "").strip()
+            if not key or not val:
+                continue
+            if not _is_good_value(val):
+                continue
+            node_key = (key, val, src, pg, sec)
+            if node_key in seen_global:
+                continue
+            seen_global.add(node_key)
+            all_rows.append(r)
+
+    return all_rows
+
+
+# ---------------- Guarantee at least 1 tag per topic ----------------
+def ensure_min_one_tag_per_topic(
+    topics: List[Dict[str, Any]],
+    tag_bank: List[Dict[str, Any]],
+    default_key: str = "topic"
+) -> List[Dict[str, Any]]:
+    tagged_topic_ids: set = set()
+    seen_pairs: set = set()
+
+    def _topic_id(e: Dict[str, Any]) -> Tuple[str, int, str]:
+        src = (e.get("source_file") or "document").strip()
+        try:
+            pg = int(e.get("original_page", -1))
+        except Exception:
+            pg = -1
+        sec = (e.get("section") or "").strip()
+        return (src, pg, sec)
+
+    for r in tag_bank:
+        src = (r.get("source_file") or "document").strip()
+        try:
+            pg = int(r.get("page", -1))
+        except Exception:
+            pg = -1
+        sec = (r.get("section") or "").strip()
+        tagged_topic_ids.add((src, pg, sec))
+        cand = (r.get("candidates") or [{}])[0]
+        k = (cand.get("key") or "").strip().lower()
+        v = (cand.get("value") or "").strip().lower()
+        if k and v:
+            seen_pairs.add((k, v, src, pg, sec))
+
+    for t in topics:
+        tid = _topic_id(t)
+        if tid in tagged_topic_ids:
+            continue
+        src, pg, sec = tid
+        quo = (t.get("quote") or "").strip()
+        key = default_key
+        val = _derive_value_1_2_words(sec, quo).strip().lower()
+        if (key, val, src, pg, sec) in seen_pairs:
+            val_alt = _derive_value_1_2_words(sec + " " + quo, quo).strip().lower()
+            if _is_good_value(val_alt) and (key, val_alt, src, pg, sec) not in seen_pairs:
+                val = val_alt
+            else:
+                val = "topic"
+        if not _is_good_value(val):
+            val = "topic"
+        tag_bank.append({
+            "page": pg,
+            "source_file": src,
+            "section": sec,
+            "quote": quo,
+            "candidates": [{"key": key, "value": val, "score": 0.01}]
+        })
+        tagged_topic_ids.add(tid)
+        seen_pairs.add((key, val, src, pg, sec))
+
+    return tag_bank
 
 # ---------------- PDF TOC Check ------------------------------
 
@@ -463,14 +621,56 @@ def treenode_to_pageindex_dict(node: TreeNode, source_file: str) -> Dict[str, An
 
     return out
 
+# ---------------- PDF page count + page-chunk fallback ----------------
+def _pdf_page_count(pdf_path: str) -> int:
+    try:
+        import fitz
+        doc = fitz.open(pdf_path)
+        n = doc.page_count
+        doc.close()
+        return n
+    except Exception:
+        return 0
+
+
+def _extract_page_chunks(pdf_path: str) -> List[Dict[str, Any]]:
+    """
+    Fallback extractor: returns one flat entry per PDF page.
+    Used when no embedded TOC exists and the document exceeds max_pageindex_pages.
+    """
+    try:
+        import fitz
+    except ImportError:
+        raise SystemExit("PyMuPDF (fitz) is required for page-chunk fallback. Install with: pip install pymupdf")
+
+    source_file = os.path.basename(pdf_path)
+    entries = []
+    doc = fitz.open(pdf_path)
+    for page_num in range(doc.page_count):
+        page = doc[page_num]
+        text = page.get_text().strip()
+        if not text:
+            continue
+        entries.append({
+            "title": f"Page {page_num + 1}",
+            "page_start": page_num + 1,
+            "text": text,
+            "source_file": source_file,
+            "children": []
+        })
+    doc.close()
+    return entries
+
+
 # ---------------- Helper: load_or_convert_pageindex (copied) ----------------
-def load_or_convert_pageindex(input_path: str, out_dir: str, debug: bool=False) -> Tuple[str, Any]:
+def load_or_convert_pageindex(input_path: str, out_dir: str, debug: bool=False, max_pageindex_pages: int=300) -> Tuple[str, Any]:
     """
     Hybrid loader:
 
     - If PDF:
-        - If embedded TOC exists → use PyMuPDFExtractor
-        - Else → fallback to PageIndex API
+        1. If embedded TOC exists → use PyMuPDFExtractor
+        2. Else if page count <= max_pageindex_pages → PageIndex API
+        3. Else → page-chunk fallback (one flat entry per page)
     - If JSON → load as before
     """
     path = input_path
@@ -512,7 +712,21 @@ def load_or_convert_pageindex(input_path: str, out_dir: str, debug: bool=False) 
 
                 return out_json_path, pi_like_dict
 
-        # ---- Fallback to PageIndex ----
+        # ---- Fallback to PageIndex (guarded by page count) ----
+        page_count = _pdf_page_count(path)
+        if page_count > max_pageindex_pages:
+            print(
+                f"[INFO] Document has {page_count} pages which exceeds the PageIndex limit "
+                f"({max_pageindex_pages}). Using page-chunk fallback."
+            )
+            chunks = _extract_page_chunks(path)
+            base_name = os.path.splitext(os.path.basename(path))[0]
+            out_json_path = os.path.join(out_dir, f"{base_name}_pagechunks_tree.json")
+            with open(out_json_path, "w", encoding="utf-8") as f:
+                json.dump(chunks, f, ensure_ascii=False, indent=2)
+            print(f"[INFO] Page-chunk tree written to: {out_json_path}")
+            return out_json_path, chunks
+
         if PageIndexClient is None:
             raise SystemExit(
                 "PDF input detected, but neither PyMuPDF TOC nor PageIndex SDK is available.\n"
@@ -527,7 +741,7 @@ def load_or_convert_pageindex(input_path: str, out_dir: str, debug: bool=False) 
                 "PDF input detected, but PAGEINDEX_API_KEY is not set."
             )
 
-        print("[INFO] No embedded TOC found. Falling back to PageIndex.")
+        print(f"[INFO] No embedded TOC found. Document has {page_count} pages. Falling back to PageIndex.")
 
         pi_client = PageIndexClient(api_key=api_key)
         submit_res = pi_client.submit_document(path)
@@ -599,6 +813,8 @@ def main():
     ap.add_argument("--out_dir", required=True)
     ap.add_argument("--model", default="gpt-5-mini")
     ap.add_argument("--industry", default="")
+    ap.add_argument("--max_pageindex_pages", type=int, default=300,
+                    help="Documents with more pages than this will skip PageIndex and use page-chunk fallback (default: 300)")
     ap.add_argument("--debug", action="store_true")
     args = ap.parse_args()
 
@@ -608,7 +824,7 @@ def main():
     client = make_client()
 
     # Convert or load
-    pi_path, pi_tree = load_or_convert_pageindex(input_path, args.out_dir, args.debug)
+    pi_path, pi_tree = load_or_convert_pageindex(input_path, args.out_dir, args.debug, max_pageindex_pages=args.max_pageindex_pages)
     # Flatten
     default_src = os.path.splitext(os.path.basename(pi_path))[0] + ".json"
     index_entries = flatten_pageindex_root(pi_tree, max_items=None, default_source=default_src)
@@ -628,8 +844,42 @@ def main():
 
     if not filtered:
         print("[WARN] No filtered entries (quote length > 100). Tag bank will be empty.")
-    # Tag bank generation
-    tag_bank = tag_document_global_with_llm(client, args.model, filtered, industry = args.industry, debug=args.debug) if filtered else []
+
+    # Tag bank generation (batched — scales min/max tags to batch size automatically)
+    tag_bank = tag_document_global_batched(
+        client=client,
+        model=args.model,
+        index_entries=filtered,
+        industry=args.industry,
+        debug=args.debug,
+        batch_size=60
+    ) if filtered else []
+
+    # Guarantee at least 1 tag per topic
+    if filtered:
+        tag_bank = ensure_min_one_tag_per_topic(filtered, tag_bank)
+
+    if args.debug and filtered:
+        topic_ids = set()
+        for t in filtered:
+            src = (t.get("source_file") or "document").strip()
+            try:
+                pg = int(t.get("original_page", -1))
+            except Exception:
+                pg = -1
+            sec = (t.get("section") or "").strip()
+            topic_ids.add((src, pg, sec))
+        tagged_ids = set()
+        for r in tag_bank:
+            src = (r.get("source_file") or "document").strip()
+            try:
+                pg = int(r.get("page", -1))
+            except Exception:
+                pg = -1
+            sec = (r.get("section") or "").strip()
+            tagged_ids.add((src, pg, sec))
+        print(f"[DEBUG] Tag coverage by topic: {len(tagged_ids)}/{len(topic_ids)}")
+
     out_tag_path = os.path.join(args.out_dir, "tag_bank.json")
     with open(out_tag_path, "w", encoding="utf-8") as f:
         json.dump(tag_bank, f, ensure_ascii=False, indent=2)
