@@ -18,6 +18,7 @@ import json
 import argparse
 import time
 import csv
+import concurrent.futures
 from typing import Any, Dict, List, Tuple
 # minimal deps used by tagging (no heavy imports here)
 from openai import OpenAI
@@ -472,49 +473,50 @@ def tag_document_global_batched(
     index_entries: List[Dict[str, Any]],
     industry: str,
     debug: bool=False,
-    batch_size: int=60
+    batch_size: int=60,
+    max_workers: int=8,
 ) -> List[Dict[str, Any]]:
-    all_rows: List[Dict[str, Any]] = []
-    seen_global: set = set()  # dedup per node across batches
-
     if not index_entries:
         return []
 
-    batch_num = 0
-    for bi in range(0, len(index_entries), batch_size):
-        batch_num += 1
-        batch = index_entries[bi:bi+batch_size]
-        # Scale tag targets to batch size so LLM covers every entry
-        min_tags = len(batch)
-        max_tags = len(batch) * 3
+    batches = [
+        (i + 1, index_entries[bi:bi + batch_size])
+        for i, bi in enumerate(range(0, len(index_entries), batch_size))
+    ]
 
-        rows = tag_document_global_with_llm(
+    def _call_batch(batch_num_and_batch):
+        batch_num, batch = batch_num_and_batch
+        return tag_document_global_with_llm(
             client=client,
             model=model,
             index_entries=batch,
             industry=industry,
             debug=debug,
-            min_tags=min_tags,
-            max_tags=max_tags,
-            tag=f"tag_global_b{batch_num}"
+            min_tags=len(batch),
+            max_tags=len(batch) * 3,
+            tag=f"tag_global_b{batch_num}",
         )
 
-        for r in rows:
-            cand = (r.get("candidates") or [{}])[0]
-            key = (cand.get("key") or "").strip().lower()
-            val = (cand.get("value") or "").strip().lower()
-            src = (r.get("source_file") or "document").strip()
-            pg  = r.get("page", -1)
-            sec = (r.get("section") or "").strip()
-            if not key or not val:
-                continue
-            if not _is_good_value(val):
-                continue
-            node_key = (key, val, src, pg, sec)
-            if node_key in seen_global:
-                continue
-            seen_global.add(node_key)
-            all_rows.append(r)
+    all_rows: List[Dict[str, Any]] = []
+    seen_global: set = set()
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = {executor.submit(_call_batch, b): b[0] for b in batches}
+        for future in concurrent.futures.as_completed(futures):
+            for r in future.result():
+                cand = (r.get("candidates") or [{}])[0]
+                key = (cand.get("key") or "").strip().lower()
+                val = (cand.get("value") or "").strip().lower()
+                src = (r.get("source_file") or "document").strip()
+                pg  = r.get("page", -1)
+                sec = (r.get("section") or "").strip()
+                if not key or not val or not _is_good_value(val):
+                    continue
+                node_key = (key, val, src, pg, sec)
+                if node_key in seen_global:
+                    continue
+                seen_global.add(node_key)
+                all_rows.append(r)
 
     return all_rows
 
