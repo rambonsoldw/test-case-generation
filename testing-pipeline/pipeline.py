@@ -43,6 +43,7 @@ import json
 import argparse
 import subprocess
 import time
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -181,7 +182,8 @@ def main():
             continue
 
         doc_name    = Path(input_path).stem
-        doc_out_dir = os.path.join(cli.out_dir, doc_name)
+        timestamp   = datetime.now().strftime("%Y%m%d_%H%M%S")
+        doc_out_dir = os.path.join(cli.out_dir, f"{timestamp}_{doc_name}")
         os.makedirs(doc_out_dir, exist_ok=True)
 
         merged = resolve_args(defaults, doc)
