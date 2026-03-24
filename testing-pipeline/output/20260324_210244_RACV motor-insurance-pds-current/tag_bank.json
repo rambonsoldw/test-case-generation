@@ -1,0 +1,1315 @@
+[
+  {
+    "page": 33,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Driving unlicensed",
+    "quote": "If, at the time of an incident, the driver of your vehicle or a substitute vehicle: \u0007did not hold a licence, or \u0007was a cancelled, suspended or disqualified driver, or \u0007was a learner driver not accompanied by a licensed driver who holds the class of licence required by the learner's permit, or \u0007did not hold the appropriate class of licence for the vehicle we will refuse any claim unless: you were not the driver and you can satisfy us you had no reason to suspect that any of these matters applied to the driver. Even if we agree to pay your claim for loss or damage to your vehicle, the driver will have no liability cover and we may seek recovery of an amount from this driver.",
+    "candidates": [
+      {
+        "key": "exclusions",
+        "value": "unlicensed_driver",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 33,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Improper Vehicle use",
+    "quote": "If, at the time of an incident: \u0007you or the driver of your vehicle or a substitute vehicle was engaged in a wilful or reckless act while driving the vehicle, or \u0007your vehicle, a substitute vehicle or anything attached to your vehicle or a substitute vehicle was being used to carry or store explosives, flammable or combustible substances or liquids illegally, or \u0007your vehicle or a substitute vehicle or anything being towed, including a trailer or caravan, was: - \u0007in unsafe condition that caused or contributed to the incident, or - \u0007being towed illegally, or \u0007your vehicle or a substitute vehicle was being used in a race, rally, trial, test, contest, track day, any kind of motor sport, or for unlawful purposes that caused or contributed to the incident we will refuse any claim.",
+    "candidates": [
+      {
+        "key": "exclusions",
+        "value": "improper_use",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 34,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Your responsibilities when you are insured with us",
+    "quote": "If you do not tell us the following we may refuse or reduce a claim if they cause or contribute to an incident, or cancel your Policy if we would not have issued you cover: \u0007you change the address where your vehicle is normally kept \u0007you change the way you use your vehicle \u0007you use your vehicle for a driver education course \u0007you hire out your vehicle \u0007your vehicle is not in a condition that meets registration requirements in your State or Territory \u0007your vehicle is not in good order and repair, free from rust, mechanical, hail or unrepaired damage, or any other damage that would make it unsafe \u0007you use your vehicle for events relating to a motor vehicle club, bash or charity event. The course of action we take when you fail to tell us these things will be considered in each circumstance ba",
+    "candidates": [
+      {
+        "key": "limitations",
+        "value": "change_notification",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 22,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Windscreen option",
+    "quote": "If you have chosen this option, you will not need to pay any excess when only your vehicle’s windscreen, sunroof or window glass is damaged as a result of an incident described on page 7 under the heading ‘Cover for loss or damage’: we will: \u0007repair or replace the windscreen, sunroof or window glass, or \u0007pay you the cost of repairing or replacing the windscreen, sunroof or window glass. Any Repairer option If we agree to pay your claim as a result of an incident, we will arrange for an RACV Partner Repairer to fix your vehicle – see page 32. However, if you have chosen this option you may use any licensed repairer of your choice, including an RACV Partner Repairer – see page 32. Your choice of repairer must have all the necessary equipment, skills, capabilities, licences and authorisations",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "windscreen_repair",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 26,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Emergency transport and accommodation",
+    "quote": "If your vehicle is damaged and cannot be driven or used as a result of an incident we have agreed to cover under ‘Cover for loss or damage’ that occurs more than 100 kilometres from your home. We pay this additional cover on top of your market value. we will: \u0007pay up to $750 in total for the reasonable costs of: - \u0007transportation for you, your passengers and your domestic pets to your home or, if we agree, to another destination, - \u0007temporary accommodation for you, your passengers and your domestic pets covering the room rate only, and \u0007transportation of your vehicle from: - \u0007the place your vehicle is repaired to your home, or - \u0007the location of the incident to a repairer near your home. not covered: \u0007the costs of transporting any vehicle or other item being towed by your vehicle at the ti",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "emergency_travel",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 35,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Claiming under your Policy",
+    "quote": "We are available to help you 24 hours a day, 7 days a week on 13 19 03. If you make a claim, we will: \u0007ask a series of questions, or ask for detailed written information \u0007give immediate assistance with the claim \u0007tell you if you need to pay any excess and how to pay it. 28\n\n29",
+    "candidates": [
+      {
+        "key": "claims_process",
+        "value": "lodgement",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 36,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Your responsibilities when making a claim under this Policy",
+    "quote": "Your responsibilities when you make a claim are described below. These responsibilities also apply to anyone seeking cover under your Policy. If you do not meet your responsibilities, we may refuse to pay your claim or reduce what we pay for your claim. We may also decide to cancel your policy. The course of action we take when you fail to meet your responsibilities will be considered in each circumstance based on what impact or effect your failure caused or contributed to the claim or our decision to issue your Policy. you must: \u0007do everything reasonable to prevent further loss or damage \u0007co-operate fully with us, even if we have already paid your claim. This may include: - \u0007you not behaving in a way that is improper, hostile, threatening, abusive or dangerous - \u0007providing us with all the",
+    "candidates": [
+      {
+        "key": "claims_process",
+        "value": "claimant_obligations",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 37,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "What is an excess?",
+    "quote": "An excess is an amount you contribute towards the cost of a claim. There are three types of excess: \u0007basic \u0007age \u0007special. When you make a claim, an excess may apply. If so, we will: \u0007deduct the excess from any claim payment, or \u0007request you pay the excess to us or, to the repairer or supplier. If we request you pay the excess, we will tell you who to pay and may require payment as part of the finalisation of your claim. If you hold Comprehensive Motor Vehicle Insurance, you can choose a higher basic excess to reduce your premium (see our Flexi Excess Discount on page 41). If available, you may remove the basic excess by paying an extra premium.",
+    "candidates": [
+      {
+        "key": "deductibles",
+        "value": "excess_types",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 37,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "When an excess applies",
+    "quote": "If you make any type of claim, you must pay any: \u0007basic excess that applies, and \u0007age excess where the driver of your vehicle was under 25 years of age, or 25 years of age or more with less than 2 years of driving experience after obtaining a provisional or probationary licence, and \u0007special excess in addition to any age excess or basic excess. The type and amount of any Policy excess you must pay are listed on your current Certificate of Insurance.",
+    "candidates": [
+      {
+        "key": "deductibles",
+        "value": "excess_applicability",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 37,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "When an excess does not apply",
+    "quote": "You will not have to pay an excess if: \u0007you make a claim for an incident that we are satisfied was not the fault of you, the driver of, or a passenger in your vehicle, or a substitute vehicle, and \u0007you can provide the name and residential address of a person(s) we agree is at fault, and the amount of the claim is more than any basic excess. See ‘Determining fault in an incident’ on page 31. If we are unable to determine that someone else was responsible, the excess is payable. You will not have an excess if you are claiming for windscreen, sunroof or window glass damage only and you have chosen the Windscreen Option available under Comprehensive Insurance (see page 15). For further details on excesses, together with details on how these excesses are calculated, please refer to our Motor In",
+    "candidates": [
+      {
+        "key": "deductibles",
+        "value": "excess_waiver",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 38,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Determining fault in an incident",
+    "quote": "For some claims we will need to decide if you, your driver, a passenger in your vehicle or someone else was not at fault in certain incidents. This will enable us to decide: \u0007when an excess does not apply, or \u0007if you are entitled to any additional covers, such as: - \u0007Hire car after a not at fault collision - \u0007Uninsured motorist damage - \u0007Insured motorist damage. To assist us to do this you will need to provide us the name and residential address of a person(s) who you believe was at fault. To determine that you or your driver was not at fault for the collision we may request additional information – for example witness statements or photographs – and consider any laws, bylaws or rules that apply to the claim circumstances. 31\n\nFor examples of how we calculate claims if your vehicle can be",
+    "candidates": [
+      {
+        "key": "claims_process",
+        "value": "fault_determination",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 39,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Repairing your vehicle",
+    "quote": "If we agree to pay your claim for loss or damage to your vehicle and we agree your vehicle can be repaired, information on how we settle your claim is described on pages 32 to 34. If your vehicle is a total loss If your vehicle is considered by us to be a total loss, how we settle your claim will depend upon the type of cover you have chosen: \u0007for Comprehensive Insurance, see page 35 \u0007for Third Party Fire & Theft Insurance, if the incident is fire, theft or attempted theft see page 35 \u0007for Third Party Fire & Theft Insurance, if the incident is covered under ‘Uninsured motorist damage’ or ‘Insured motorist damage’ see page 36 \u0007for Third Party Property Damage Insurance, if the incident is covered under ‘Uninsured motorist damage’ see page 36. Repairing your vehicle",
+    "candidates": [
+      {
+        "key": "claims_process",
+        "value": "repair_settlement",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 39,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Choosing a repairer",
+    "quote": "If we agree to repair your vehicle, we will arrange for an RACV Partner Repairer to fix your vehicle or you may choose your own repairer to fix your vehicle, if: \u0007you have Comprehensive Insurance and: - \u0007you have chosen the ‘Any Repairer’ option – see page 15, or - \u0007your vehicle is a motorcycle, or \u0007you have Third Party Fire & Theft Insurance – see page 17, or \u0007you have Third Party Property Damage Insurance – see page 20. If we arrange for an RACV Partner Repairer to fix your vehicle we will: \u0007help find an RACV Partner Repairer most convenient to you \u0007choose the most suitable repair method for the type of damage to your vehicle \u0007manage the whole repair process on your behalf. we may: \u0007need to inspect your vehicle before authorising repairs. If so, we will tell you where you need to take yo",
+    "candidates": [
+      {
+        "key": "claims_process",
+        "value": "repairer_choice",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 40,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Authorising repairs to your vehicle",
+    "quote": "You must not start, approve or authorise any repairs to your vehicle under any circumstances, unless: \u0007we allow it under ‘Emergency repairs’ (see pages 13 and 19), or \u0007you obtain our prior written consent by contacting us on 13 19 03. If you do, then we may decide not to pay for those repairs. If we have cash settled your claim by paying you the fair and reasonable cost to repair your vehicle as determined by us (rather than authorising repairs), and you subsequently arrange or authorise repairs, we are not responsible for any costs associated with those repairs. Parts used when repairing your vehicle Generally, we use the following parts to repair your vehicle. If your vehicle is: \u0007under 3 years, we use new genuine parts (when reasonably available) \u00073 years or older, we use: – \u0007new genuin",
+    "candidates": [
+      {
+        "key": "claims_process",
+        "value": "repair_authorisation",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 41,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "The Motor Vehicle Insurance and Repair Industry Code of Conduct",
+    "quote": "uct This code is intended to promote transparent, informed, effective and co-operative relationships between smash repairers and insurance companies based on mutual respect and open communication. We support the code and are committed to continually reviewing our operations to ensure compliance.\n\nHow we settle a claim Our choice will have regard to the circumstances of your claim and consider any preference you may have. However, you can't claim under our lifetime guarantee if: \u0007you have sold your vehicle - that is, you are no longer the owner of the vehicle \u0007you (or your agent) authorised repairs to your vehicle without our prior written consent \u0007you arrange repairs after we cash settled your claim - that is, we did not authorise repairs \u0007there is loss or damage to, or failure of any elec",
+    "candidates": [
+      {
+        "key": "limitations",
+        "value": "code_conduct",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 42,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "If your vehicle is a total loss – Comprehensive Insurance",
+    "quote": "If you have Comprehensive Insurance and we consider your vehicle to be a total loss: we will: \u0007pay you the agreed value or market value depending on the cover listed on your current Certificate of Insurance after deducting: - any unpaid premium, and - any applicable excesses, and - \u0007the unused portions of the registration and Compulsory Third Party Insurance (if applicable) that you are entitled to. What will be unused will depend on the time between registration and the incident and the refund rules in your State or Territory. if we pay a total loss: \u0007your Policy comes to an end and no refund of premium is due to you, and \u0007the vehicle becomes our property.",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "total_loss",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 42,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "If your vehicle is a total loss – Third Party Fire & Theft Insurance",
+    "quote": "nsurance If you have Third Party Fire & Theft Insurance and we consider your vehicle to be a total loss due to fire or theft or attempted theft: we will: if the market value of your vehicle is $10,000 or less: \u0007pay you the market value \u0007deduct from the amount we pay: - any unpaid premium - any applicable excess, and - \u0007the unused portions of the registration and Compulsory Third Party Insurance (if applicable) that you are entitled to. What will be unused will depend on the time between registration and the incident and the refund rules in your State or Territory. In this case the vehicle becomes our property. 35\n\nwe will: If the market value of your vehicle is more than $10,000: \u0007pay you the market value, less the amount we estimate the salvage is worth, up to $10,000. \u0007deduct from the am",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "tpft_total",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 43,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "If your vehicle is a total loss - Uninsured motorist damage",
+    "quote": "If you have chosen Third Party Fire & Theft Insurance or Third Party Property Damage Insurance and we consider your vehicle to be a total loss as result of a claim made under an ‘Uninsured motorist damage’ section of your Policy: we will: \u0007pay you the market value up to $5,000 for your vehicle after deducting: - any unpaid premium, and - \u0007the amount we estimate the salvage is worth. If we pay a total loss: \u0007the vehicle remains your property, and \u0007your Policy comes to an end and no refund of your premium is due to you.",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "uninsured_total",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 43,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "If your vehicle is a total loss – Insured motorist damage",
+    "quote": "If you have chosen Third Party Fire & Theft Insurance and we consider your vehicle to be a total loss as a result of a claim made under the ‘Insured motorist damage’ section of your Policy: we will: \u0007pay you the market value up to $5,000 for your vehicle after deducting: - any unpaid premium, and - \u0007the amount we estimate the salvage is worth, and - any unpaid administration charge. If we pay a total loss: \u0007the vehicle remains your property, and \u0007your Policy comes to an end and no refund of your premium is due to you.",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "insured_total",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 43,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Recovery action by us",
+    "quote": "and Recovery action by you apply where we cover you under the policy for some or all of the loss or damage you suffer in connection with an incident. Recovery action by us You agree we may, if we choose to, take steps to recover from someone else we consider responsible for the incident: \u0007some or all of the loss or damage we cover; and/or \u0007some or all of the loss or damage which we do not cover, whether or not it is covered by another insurer or you do not have cover for it. You agree we may take such recovery action: \u0007without your consent; \u0007using your name; and \u0007whether or not you have been, or have a right to be, fully compensated for all of your loss or damage by us or anybody else. 36 How we settle a claim\n\nExamples of recovery action we may take include: \u0007conducting legal proceedings",
+    "candidates": [
+      {
+        "key": "claims_process",
+        "value": "subrogation",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 44,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Recovery action by you",
+    "quote": "You may only take recovery action with our prior written consent and on conditions which we in our discretion impose. You must have proper regard for our interests in respect of loss or damage that we cover. You must seek to recover the loss or damage we cover in addition to any other loss or damage you have suffered in connection with the incident. Of any amount recovered in recovery action you take, you may first keep the amount of loss or damage you have suffered in connection with the incident and for which you do not have any cover with us plus any interest recovered on that amount and any administrative and legal costs you have incurred in taking How we settle a claim 37\n\nthe recovery action. You then pay us the amount we have paid, or must pay, you under the policy plus interest rec",
+    "candidates": [
+      {
+        "key": "claims_process",
+        "value": "recovery_consent",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 45,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "If you are a business registered or required to be registered for GST purposes and entitled to an input tax credit",
+    "quote": "d for GST purposes and entitled to an input tax credit We will reduce any payment we make by an amount equal to your input tax credit entitlement. This applies to any amount we pay, including where we state that an amount will include GST. Any payment we make to settle your claim will be considered to be made in full even if the amount we pay has been reduced as described above.",
+    "candidates": [
+      {
+        "key": "premiums",
+        "value": "gst_adjustment",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 45,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Credit provider’s rights",
+    "quote": "If you have borrowed money using your vehicle as security, you may be required to note the credit provider’s interest in the vehicle. This may also apply if you lease, or have a hire purchase agreement on your vehicle. If this is the case, and the credit provider is listed on your current Certificate of Insurance, the cover you have chosen extends to them and the conditions and exclusions also apply to them. we will: \u0007consider your vehicle used as security to be under a finance arrangement \u0007if we decide to pay you the the fair and reasonable cost of repairs as determined by us or the agreed or market value of your vehicle, pay the credit provider the lesser of: - \u0007where applicable, the agreed value, or the market value, depending on the cover listed on your current Certificate of Insurance",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "financee_interest",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 48,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "How we work out your premium",
+    "quote": "Your insurance premium is based on the likelihood of a claim being made on your Policy in the future. There are a number of factors we take into account in determining your premium, including: \u0007your vehicle \u0007where your vehicle is kept \u0007age of the owners and drivers \u0007the number and types of claims and incidents. For full details please refer to our Motor Insurance Premium, Excess and Discounts Guide.",
+    "candidates": [
+      {
+        "key": "premiums",
+        "value": "premium_factors",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 48,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Discounts you may be eligible for",
+    "quote": "If you take out insurance with us you may be eligible for one or more of the following discounts described on this page: \u0007",
+    "candidates": [
+      {
+        "key": "premiums",
+        "value": "discounts_available",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 48,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Flexi Excess Discount",
+    "quote": "We calculate the discounts that apply to your Policy before we tell you what your premium will be. Discounts we have applied will be listed on your current Certificate of Insurance. We may introduce new discounts from time to time. Multi-Policy Discount Applies to your Motor Insurance policy if you hold two or more eligible RACV Insurance policies. Years of Membership Benefit Years of Membership Benefit is linked to the colour of your RACV membership card. Please contact RACV if you have any questions in relation to your RACV membership card colour. Flexi Excess Discount Flexi Excess Discount applies if you hold Comprehensive Motor Vehicle Insurance. \u0007This discount allows you to reduce your premium by selecting a higher basic excess. The excess you choose is shown as your basic excess on y",
+    "candidates": [
+      {
+        "key": "premiums",
+        "value": "flexi_excess_discount",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 49,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Paying your premium – what you should know",
+    "quote": "You can pay your premium: annually in one lump sum, or \u0007by monthly instalments by direct debit from an account or credit card you nominate (if eligible). If you pay your premium annually the due date for the payment is set out on your current Certificate of Insurance. If you pay your premium by monthly instalments the amount and due date for each instalment is set out on your current Certificate of Insurance.",
+    "candidates": [
+      {
+        "key": "premiums",
+        "value": "payment_methods",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 49,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "What happens if you don’t pay on time",
+    "quote": "When you take out insurance, you need to pay your annual premium or any instalments by the due date specified on your Certificate of Insurance. An instalment is unpaid if it cannot be deducted from your nominated account or credit card. If your premium is overdue we will send you a notice outlining the overdue amount and when it needs to be paid. If your premium remains unpaid after the time period specified in the notice we send, we will: cancel your policy for non-payment, and refuse to pay any claim for an incident occurring after the cancellation date. If you pay by instalment, we will send you a second notice either before cancellation informing you of the effective date of cancellation, or within 14 days after cancellation confirming the effective date of cancellation. If you need to",
+    "candidates": [
+      {
+        "key": "premiums",
+        "value": "nonpayment_cancellation",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 50,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Making changes to your Policy",
+    "quote": "If you or we want to make certain changes to your Policy, the following sections describe what you will need to do or what we will do: \u0007",
+    "candidates": [
+      {
+        "key": "limitations",
+        "value": "policy_changes",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 50,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "You want to make changes to your Policy",
+    "quote": "- see this page \u0007You sell or give away your vehicle - see this page \u0007You change vehicles - see this page \u0007You want to cancel your Policy - see page 44 \u0007We want to cancel your Policy - see page 44 \u0007We want to give you written notice - see page 44. You want to make changes to your Policy If you want to make changes to your Policy: you need to: contact us first, and \u0007pay us any additional premium otherwise we will not make the change. we will: make the change only if we agree \u0007issue you with a current Certificate of Insurance refund any amount owing to you.",
+    "candidates": [
+      {
+        "key": "premiums",
+        "value": "change_premium",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 50,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Additional premium or refund",
+    "quote": "When a requested change is made to your policy, you may need to pay us an additional premium, or we may need to refund part of your premium. If an additional premium applies to the change, you are required to pay the additional premium at the time the change is made. If we make the change before you pay any additional premium, then you must pay the additional premium by the date we tell you it is due or we may remove the change from your policy. If we cannot remove the change and maintain cover, we may cancel your policy. If the additional premium we need to charge you is less than $15, then we’ll waive it – that is, you don't need to pay it. However, if the amount we need to refund is less than $5, then we’ll donate it to charity.",
+    "candidates": [
+      {
+        "key": "premiums",
+        "value": "premium_adjustment",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 50,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "You change vehicles",
+    "quote": "- see this page \u0007You want to cancel your Policy - see page 44 \u0007We want to cancel your Policy - see page 44 \u0007We want to give you written notice - see page 44. You want to make changes to your Policy If you want to make changes to your Policy: you need to: contact us first, and \u0007pay us any additional premium otherwise we will not make the change. we will: make the change only if we agree \u0007issue you with a current Certificate of Insurance refund any amount owing to you. Additional premium or refund When a requested change is made to your policy, you may need to pay us an additional premium, or we may need to refund part of your premium. If an additional premium applies to the change, you are required to pay the additional premium at the time the change is made. If we make the change before yo",
+    "candidates": [
+      {
+        "key": "premiums",
+        "value": "vehicle_change",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 51,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "You want to cancel your Policy",
+    "quote": "If you want to cancel your Policy you must contact us first: we will: \u0007deduct from the premium you paid an amount that covers: - \u0007the period that you have been insured for, and then we will pay you what is left of the premium. however: \u0007if you are paying your premium by monthly instalments, you must pay us any monthly instalments due but unpaid. You authorise us to deduct these amounts by way of direct debit from the account or credit card you have previously nominated for monthly instalment deductions.",
+    "candidates": [
+      {
+        "key": "premiums",
+        "value": "cancellation_refund",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 51,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "We want to cancel your Policy",
+    "quote": "If we want to cancel your Policy: we will: \u0007provide you with written notice, if required \u0007refund your unused premium after deducting an amount that covers the period that you have been insured for. however: \u0007if you are paying your premium by monthly instalments, you must pay us any monthly instalments due but unpaid. You authorise us to deduct these amounts by way of direct debit from the account or credit card you have previously nominated for monthly instalment deductions.",
+    "candidates": [
+      {
+        "key": "premiums",
+        "value": "insurer_cancellation",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 51,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "We want to give you written notice",
+    "quote": "If we need to provide you with any written notice regarding your Policy: we will: \u0007deliver it personally, or \u0007send it to your last known address, or \u0007deliver it by fax or electronically where it is permitted by law, or \u0007send you an electronic link by which you can access the notice where this is permitted by law. however: \u0007it is important that you tell us of any change of postal address or electronic address (if applicable) as soon as possible. You may cancel your Policy and receive a full refund within the 21 day cooling-off period (see page 5 for details). 44",
+    "candidates": [
+      {
+        "key": "claims_process",
+        "value": "written_notice",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 52,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "How to resolve a complaint or dispute",
+    "quote": "1 – Talk to a staff member \u0007If you have a complaint, the first thing to do is call 13 RACV (13 7228) or go into your local RACV Shop and talk to one of the staff \u0007If the staff member is unable to resolve the matter for you they will refer you to a manager. If you are not satisfied with the response, you can go to step 2. 2 – Seek a review \u0007If the matter is still not resolved, the manager will refer you to the RACV Member Relations Department, who will arrange a review of your complaint. If you are not satisfied with the response to your complaint, you can go to step 3. 3 – Seek an external review \u0007You are entitled to seek an external review of the decision. Information about the options available to you will be provided, including if appropriate, referring you to the external dispute resol",
+    "candidates": [
+      {
+        "key": "claims_process",
+        "value": "complaint_resolution",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 52,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "General Insurance Code of Practice",
+    "quote": "We proudly support the General Insurance Code of Practice (Code). The purpose of the Code is to raise the standards of practice and service in the general insurance industry. The objectives of the Code are: \u0007to commit us to high standards of service \u0007to promote better, more-informed relations between us and you \u0007to maintain and promote trust and confidence in the general insurance industry \u0007to provide fair and effective mechanisms for resolving complaints you make about us, and \u0007to promote continuous improvement of the general insurance industry through education and training. The Code Governance Committee is an independent body that monitors and enforces insurers’ compliance with the Code. Our commitment to you: We have adopted and support the Code and are committed to complying with it.",
+    "candidates": [
+      {
+        "key": "limitations",
+        "value": "code_practice",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 52,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Financial Claims Scheme",
+    "quote": "You may be entitled to payment under the financial claims scheme in the event that we become insolvent. Access to the scheme is subject to eligibility criteria. Information about the scheme can be obtained from www.fcs.gov.au Complaints 45",
+    "candidates": [
+      {
+        "key": "limitations",
+        "value": "fcs_coverage",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 53,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Privacy of your personal information",
+    "quote": "We and RACV Insurance value the privacy of personal information we and RACV Insurance collect about you. We and RACV Insurance collect your personal information directly from you or through others including entities listed in our Privacy Policy and the RACV Privacy Charter (Policies). They include our and RACV Insurance’s related entities, agents and distributors. How we use your personal information We and RACV Insurance and the parties listed in the Policies will use your personal information for the purposes it was collected for. That usually includes to provide you with assistance, and a product or service you requested. Your personal information may also be used for other purposes that are set out in the Policies. You may choose to not give your personal information. However, not givi",
+    "candidates": [
+      {
+        "key": "limitations",
+        "value": "privacy_policy",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 55,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Definitions",
+    "quote": "The following words have been given special meaning. accessory any extra item fitted to your vehicle, whether by the manufacturer or not. act of terrorism includes any act, or preparation in respect of action, or threat of action designed to influence the government de jure or de facto of any nation or any political division thereof, or in pursuit of political, religious, ideological or similar purposes to intimidate the public or a section of the public of any nation by any person or group(s) of persons whether acting alone or on behalf of or in connection with any organisation(s) or government(s) de jure or de facto, and which: \u0007involves violence against one or more persons \u0007involves damage to property \u0007endangers life other than that of the person committing the action \u0007creates a risk to",
+    "candidates": [
+      {
+        "key": "limitations",
+        "value": "definitions",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 57,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Claim payment examples",
+    "quote": "These Claim payment examples show you how a claim settlement is calculated based upon some practical scenarios. Any claim settlement amount will depend upon the facts of each case. Claim payment examples\n\n51\nClaim payment examples\nClaim payment examples\n4\t\t \u0007Third Party Fire & Theft – \nTotal Loss – page 16 \nWe decide your vehicle is a total loss as a \nresult of a fire. \nThe market value of the vehicle was \n$12,000. The damaged vehicle is worth \n$3,000. There is an excess of $700 and \nunpaid premium of $50. You are not \nregistered for GST.\nwe pay you $8,250 ($12,000 - $3,000 - \n$700 - $50)\nYou will keep the damaged vehicle.\n5\t\t \u0007Uninsured motorist damage – \nTotal loss – pages 16 and 20\nYour vehicle is damaged in a collision with \nanother vehicle and the driver of the other \nvehicle is total",
+    "candidates": [
+      {
+        "key": "claims_process",
+        "value": "payment_examples",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 60,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Index",
+    "quote": "Index\na\naccessories\b\n\t see definition of ‘your vehicle’ \b\n49\naccident damage\b\n\t comprehensive\b\n7\n\t third party fire & theft\b\n16\n\t third party property damage\b\n20\nadditional covers\n\t baby capsules & child seats \b\n12\n\t emergency repairs\n\t \t comprehensive\b\n13\n\t \t third party fire & theft\b\n19\n\t hire car after a not at fault collision\b\n9\n\t hire car after theft or attempted theft\n\t \t comprehensive \b\n10\n\t \t third party fire & theft \b\n18\n\t new replacement vehicle \b\n10\n\t personal items\b\n11\n\t storage costs\n\t \t comprehensive \b\n11 \n\t \t third party fire & theft\b\n19\n\t towing\n\t \t comprehensive \b\n12 \n\t \t third party fire & theft\b\n18 \t \t third party property damage\b\n20\n\t trailer or caravan damage \b\n13\nage excess\b\n30\nagreed value\b\n48\nalcohol and drivers\b\n26\nannual premium\n\t what happens if you don't pay\b\n42",
+    "candidates": [
+      {
+        "key": "limitations",
+        "value": "index_reference",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 14,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Comprehensive Insurance",
+    "quote": "If you hold Comprehensive Insurance we will provide cover as described on pages 7 to 15. Comprehensive Insurance also includes the following cover described in the section ‘Cover for all types of insurance’: Liability cover for damage you cause someone else's property – see page 22 Legal representation – see page 23 Cover for loss or damage We will cover loss or damage to your vehicle caused by any of the following incidents: an accident including a collision flood fire malicious act storm theft or attempted theft. we will decide whether to: repair",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "comprehensive",
+        "score": 0.87
+      }
+    ]
+  },
+  {
+    "page": 23,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Third Party Fire &  Theft Insurance",
+    "quote": "If you hold Third Party Fire & Theft Insurance we will provide cover as described on pages 16 to 19. Third Party Fire & Theft Insurance also includes the following cover described in the section ‘Cover for all types of insurance’. Liability cover for damage you cause someone else's property – see page 22 Legal representation – see page 23 Cover for fire & theft loss or damage We will cover loss or damage to your motor vehicle up to $10,000 caused by either of the following incidents: fire theft or attempted theft. we will decide whether to: repair your vehicle, or pay you the fair and reasonable cost of repairing",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "third_party_fire",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 27,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Third Party Property Damage Insurance",
+    "quote": "If you hold Third Party Property Damage Insurance we will provide cover as described on this page. Third Party Property Damage Insurance also includes the following cover described in the section ‘Cover for all types of insurance’: Liability cover for damage you cause someone else's property – see page 22 Legal representation – see page 23 Uninsured motorist damage This provides limited cover for damage to your vehicle when you are not at fault in a collision (if you are at fault see ‘Liability cover for damage you cause someone else's property’ on page 22). we will provide you with limited cover up to $5,000",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "third_party_property",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 29,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Cover for all types of Insurance",
+    "quote": "If you hold any type of insurance, we will provide cover as described in the following sections: Liability cover for damage you cause someone else's property - see this page Legal representation - see page 23 Liability cover for damage you cause to someone else's property Under liability cover, we protect you if someone makes a claim against you for loss or damage to their property. For example, if you are at fault in an accident and damage someone’s vehicle. Who we will cover We will cover: you, or any driver, or any passenger, or your employer, including the government,",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "liability_cover",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 31,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Things that may  affect cover",
+    "quote": "In some situations, we may not cover you at all or we may limit the cover we give you under your Policy. These are known as exclusions. We outline the exclusions in the following sections. General exclusions The exclusions shown on pages 24 to 26 apply to all cover under your Policy. These sections also apply to liability cover. Exclusions for liability cover The exclusions for liability cover are shown under ‘When you are not entitled to liability cover’ on page 23. Other exclusions Throughout this booklet, we outline other exclusions that apply to specific situations",
+    "candidates": [
+      {
+        "key": "exclusions",
+        "value": "general_exclusions",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 35,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Claiming under your Policy",
+    "quote": "We are available to help you 24 hours a day, 7 days a week on 13 19 03. If you make a claim, we will: ask a series of questions, or ask for detailed written information give immediate assistance with the claim tell you if you need to pay any excess and how to pay it. 28 29",
+    "candidates": [
+      {
+        "key": "claims_process",
+        "value": "24_7_claims",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 36,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Your responsibilities when making a claim under this Policy",
+    "quote": "Your responsibilities when you make a claim are described below. These responsibilities also apply to anyone seeking cover under your Policy. If you do not meet your responsibilities, we may refuse to pay your claim or reduce what we pay for your claim. We may also decide to cancel your policy. The course of action we take when you fail to meet your responsibilities will be considered in each circumstance based on what impact or effect your failure caused or contributed to the claim or our decision to issue your Policy. you must: do everything reasonable to",
+    "candidates": [
+      {
+        "key": "claims_process",
+        "value": "claim_responsibilities",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 37,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Excesses",
+    "quote": "Excesses What is an excess? An excess is an amount you contribute towards the cost of a claim. There are three types of excess: basic age special. When you make a claim, an excess may apply. If so, we will: deduct the excess from any claim payment, or request you pay the excess to us or, to the repairer or supplier. If we request you pay the excess, we will tell you who to pay and may require payment as part of the finalisation of your claim. If you hold Comprehensive Motor Vehicle Insurance, you can choose a higher basic excess to reduce your premium",
+    "candidates": [
+      {
+        "key": "deductibles",
+        "value": "excess_types",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 39,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "How we settle a claim",
+    "quote": "How we settle a claim Repairing your vehicle If we agree to pay your claim for loss or damage to your vehicle and we agree your vehicle can be repaired, information on how we settle your claim is described on pages 32 to 34. If your vehicle is a total loss If your vehicle is considered by us to be a total loss, how we settle your claim will depend upon the type of cover you have chosen: for Comprehensive Insurance, see page 35 for Third Party Fire & Theft Insurance, if the incident is fire, theft or attempted theft see page 35 for Third Party Fire & Theft Insurance, if the incident is covered under ‘Uninsured motorist damage",
+    "candidates": [
+      {
+        "key": "claims_process",
+        "value": "claim_settlement",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 45,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Credit provider’s rights",
+    "quote": "If you have borrowed money using your vehicle as security, you may be required to note the credit provider’s interest in the vehicle. This may also apply if you lease, or have a hire purchase agreement on your vehicle. If this is the case, and the credit provider is listed on your current Certificate of Insurance, the cover you have chosen extends to them and the conditions and exclusions also apply to them. we will: consider your vehicle used as security to be under a finance arrangement if we decide to pay you the the fair and reasonable cost of repairs as determined by us or the agreed or market value",
+    "candidates": [
+      {
+        "key": "limitations",
+        "value": "credit_provider",
+        "score": 0.85
+      }
+    ]
+  },
+  {
+    "page": 49,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Paying your premium - what you should know",
+    "quote": "Paying your premium – what you should know You can pay your premium: annually in one lump sum, or by monthly instalments by direct debit from an account or credit card you nominate (if eligible). If you pay your premium annually the due date for the payment is set out on your current Certificate of Insurance. If you pay your premium by monthly instalments the amount and due date for each instalment is set out on your current Certificate of Insurance. What happens if you don’t pay on time When you take out insurance, you need to pay your annual premium or any instalments by the due date specified on your Certificate of Insurance.",
+    "candidates": [
+      {
+        "key": "premiums",
+        "value": "payment_methods",
+        "score": 0.85
+      }
+    ]
+  },
+  {
+    "page": 50,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Making changes to  your Policy",
+    "quote": "If you or we want to make certain changes to your Policy, the following sections describe what you will need to do or what we will do: You want to make changes to your Policy - see this page You sell or give away your vehicle - see this page You change vehicles - see this page You want to cancel your Policy - see page 44 We want to cancel your Policy - see page 44 We want to give you written notice - see page 44. You want to make changes to your Policy If you want to make changes to your Policy: you need to: contact us first, and pay us any additional premium otherwise we will not make the change.",
+    "candidates": [
+      {
+        "key": "limitations",
+        "value": "policy_changes",
+        "score": 0.85
+      }
+    ]
+  },
+  {
+    "page": 52,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "How to resolve a  complaint or dispute",
+    "quote": "1 – Talk to a staff member If you have a complaint, the first thing to do is call 13 RACV (13 7228) or go into your local RACV Shop and talk to one of the staff If the staff member is unable to resolve the matter for you they will refer you to a manager. If you are not satisfied with the response, you can go to step 2. 2 – Seek a review If the matter is still not resolved, the manager will refer you to the RACV Member Relations Department, who will arrange a review of your complaint. If you are not satisfied with the response to your complaint, you can go to step 3. 3 – Seek an external review",
+    "candidates": [
+      {
+        "key": "claims_process",
+        "value": "complaints_process",
+        "score": 0.85
+      }
+    ]
+  },
+  {
+    "page": 52,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "General Insurance Code  of Practice",
+    "quote": "We proudly support the General Insurance Code of Practice (Code). The purpose of the Code is to raise the standards of practice and service in the general insurance industry. The objectives of the Code are: to commit us to high standards of service to promote better, more-informed relations between us and you to maintain and promote trust and confidence in the general insurance industry to provide fair and effective mechanisms for resolving complaints you make about us, and to promote continuous improvement of the general insurance industry through education and training. The Code Governance Committee is an independent body that monitors",
+    "candidates": [
+      {
+        "key": "limitations",
+        "value": "code_of_practice",
+        "score": 0.85
+      }
+    ]
+  },
+  {
+    "page": 52,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Financial Claims Scheme",
+    "quote": "You may be entitled to payment under the financial claims scheme in the event that we become insolvent. Access to the scheme is subject to eligibility criteria. Information about the scheme can be obtained from www.fcs.gov.au Complaints 45",
+    "candidates": [
+      {
+        "key": "limitations",
+        "value": "financial_scheme",
+        "score": 0.74
+      }
+    ]
+  },
+  {
+    "page": 53,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Privacy of your personal information",
+    "quote": "We and RACV Insurance value the privacy of personal information we and RACV Insurance collect about you. We and RACV Insurance collect your personal information directly from you or through others including entities listed in our Privacy Policy and the RACV Privacy Charter (Policies). They include our and RACV Insurance’s related entities, agents and distributors. How we use your personal information We and RACV Insurance and the parties listed in the Policies will use your personal information for the purposes it was collected for. That usually includes to provide you with assistance, and a product or",
+    "candidates": [
+      {
+        "key": "limitations",
+        "value": "privacy_info",
+        "score": 0.85
+      }
+    ]
+  },
+  {
+    "page": 57,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Claim payment examples",
+    "quote": "These Claim payment examples show you how a claim settlement is calculated based upon some practical scenarios. Any claim settlement amount will depend upon the facts of each case. Claim payment examples 51 Claim payment examples Claim payment examples 4 Third Party Fire & Theft – Total Loss – page 16 We decide your vehicle is a total loss as a result of a fire. The market value of the vehicle was $12,000. The damaged vehicle is worth $3,000. There is an excess of $700 and unpaid premium of $50. You are not registered for GST. we pay you $8,250 ($12,000 - $3,000 - $700 - $50) You will keep",
+    "candidates": [
+      {
+        "key": "claims_process",
+        "value": "examples",
+        "score": 0.84
+      }
+    ]
+  },
+  {
+    "page": 60,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Index",
+    "quote": "a accessories\\b see definition of ‘your vehicle’ \\b 49 accident damage\\b comprehensive\\b 7 third party fire & theft\\b 16 third party property damage\\b 20 additional covers baby capsules & child seats \\b 12 emergency repairs comprehensive\\b 13 third party fire & theft\\b 19 hire car after a not at fault collision\\b 9 hire car after theft or attempted theft comprehensive \\b 10 third party fire & theft \\b 18 new replacement vehicle \\b 10 personal items\\b 11 storage costs comprehensive \\b 11 third party fire & theft\\b 19 towing comprehensive \\b 12 third party fire & theft\\b 18 third party property damage\\b 20 trailer or caravan damage \\b 13 age excess\\b 30 agreed value\\b 48 alcohol and drivers\\b 26 annual premium what happens if you don't pay\\b 42 any RACV partner repairer comprehensive \\b 8 third party fire & theft\\b",
+    "candidates": [
+      {
+        "key": "limitations",
+        "value": "index",
+        "score": 0.78
+      }
+    ]
+  },
+  {
+    "page": 11,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Features & Benefits",
+    "quote": "Below is a summary of some of the features and benefits of this Policy depending on the type of cover you choose. This summary is intended as a guide only. For full details of cover including exclusions, please read the pages that follow. Summary of covers Comprehensive Third Party Fire & Theft Third Party Property Damage Cover for accidental damage to your vehicle Cover for fire and theft Cover for flood, storm or a malicious act Years of Membership Benefit Flexi Excess Discount Multi-Policy Discount Hire car after a theft Hire car after a not at fault collision (except for motorcycles)",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "policy_features",
+        "score": 0.85
+      }
+    ]
+  },
+  {
+    "page": 12,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Our agreement with you",
+    "quote": "Your Motor Insurance Policy is a contract between you and us made up of: your current Certificate of Insurance, and this Product Disclosure Statement and Policy Booklet (PDS), and any applicable Supplementary PDS. Paying your premium In return for the payment of your premium, we will provide the cover you have chosen. You can elect to pay your premium on an annual basis, or by monthly instalments (see page 42 for details of how to pay your premium and what happens if you fail to pay). 21 day cooling-off period You have a cooling-off period that allows you to cancel your Policy",
+    "candidates": [
+      {
+        "key": "limitations",
+        "value": "contract_terms",
+        "score": 0.85
+      }
+    ]
+  },
+  {
+    "page": 14,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Comprehensive Insurance",
+    "quote": "If you hold Comprehensive Insurance we will provide cover as described on pages 7 to 15. Comprehensive Insurance also includes the following cover described in the section ‘Cover for all types of insurance’: Liability cover for damage you cause someone else's property – see page 22 Legal representation – see page 23",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "repair_value",
+        "score": 0.74
+      }
+    ]
+  },
+  {
+    "page": 14,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Cover for loss or damage",
+    "quote": "We will cover loss or damage to your vehicle caused by any of the following incidents: an accident including a collision flood fire malicious act storm theft or attempted theft. we will decide whether to: repair your vehicle, or pay you the fair and reasonable cost of repairing your vehicle as determined by us, or pay you the agreed or market value, depending on the cover listed on your current Certificate of Insurance less any applicable deductions (see page 35 for details). Our choice will have regard to the circumstances of your claim and consider any preference you may have.",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "loss_damage",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 14,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Windscreen, sunroof & window glass damage",
+    "quote": "If only your vehicle’s windscreen, sunroof or window glass is damaged as a result of an incident described on this page under the heading ‘Cover for loss or damage’: we will: repair or replace the windscreen, sunroof or window glass, or pay you the cost of repairing or replacing the windscreen, sunroof or window glass. you need to: pay any basic excess, but not an age or special excess. See 'Things that may affect cover' on pages 24 to 27 for important policy exclusions to any limitations to cover described on pages 7 to 15. Comprehensive To be covered for windscreen, sunroof and window glass repairs",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "glass_damage",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 15,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Keys, locks & barrels",
+    "quote": "If the keys of your vehicle are stolen during the period of insurance, and there is no other damage to your vehicle: we will: pay up to $1,000 over and above any basic excess that applies to your Policy to replace or re-code your vehicle’s keys, locks and barrels. you need to: report the theft of the keys to the Police.",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "key_replacement",
+        "score": 0.76
+      }
+    ]
+  },
+  {
+    "page": 15,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Any RACV Partner Repairer",
+    "quote": "Your Policy automatically includes access to RACV’s extensive partner repairer network. RACV has partnered with trusted businesses to deliver quality, safe repairs and have you back on the road as soon as possible. However, you may choose your own repairer to fix your vehicle if: you have chosen the ‘Any Repairer’ option – see page 15, or your vehicle is a motorcycle. Your choice of repairer must have all the necessary equipment, skills, capabilities, licences and authorisations required by law to complete the repairs to your vehicle.",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "partner_repairer",
+        "score": 0.84
+      }
+    ]
+  },
+  {
+    "page": 16,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "– Additional cover",
+    "quote": "If you make a claim for an incident described on page 7 under the heading ‘Cover for loss or damage’, you may be entitled to one or more of the following additional covers.",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "additional_cover",
+        "score": 0.66
+      }
+    ]
+  },
+  {
+    "page": 16,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Hire car after a not at fault collision",
+    "quote": "If we agree to pay your claim as a result of a collision and your vehicle (except for motorcycles) cannot be driven, is unsafe to drive or is in for repairs, and we are satisfied you or your driver is not at fault for the collision, and you can give us the name and residential address of a person(s) we agree is at fault, and you need a hire car. See ‘Determining fault in an incident’ on page 31. we will: arrange a hire car for you and will do our best to arrange a car that meets your needs pay for the hire car until whichever happens first: your vehicle is repaired; or we pay your claim for a total loss pay up to $2,000 in total for any excess and security bond",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "hire_car_not_fault",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 17,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Hire car after theft or attempted theft",
+    "quote": "If we agree to pay your claim as a result of theft or attempted theft of your vehicle and it cannot be driven or is unsafe to drive, we will pay for the cost of a hire car up to a maximum of $60 per day: up to a maximum of 21 days, or until your vehicle is recovered and repaired, or until we pay your claim if your vehicle is a total loss whichever is the shortest period of time. we will: arrange a hire car for you and will do our best to arrange a car that meets your needs pay up to $2,000 in total for any excess and security bond payable under the hire car agreement because there is loss or damage to the hire car or it causes loss or damage. not covered: running costs of the hire car (for example, petrol or tolls) additional hire car costs (for example, any optional extras such as",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "hire_car_theft",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 17,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "New replacement vehicle",
+    "quote": "If your vehicle is considered by us to be a total loss and we agree to pay your claim, you can choose to have your vehicle replaced, if: you have bought your vehicle new, or you purchased a demonstrator vehicle, and the vehicle is in the first 24 months of its registration at the time of the incident, and a replacement vehicle is available in Australia which is of the same make, model, engine size, equipment level and paint type, and we have agreement from any credit provider noted on your current Certificate of Insurance – if applicable, and the vehicle has a tare weight of less than 2.5 tonnes. we will: replace your vehicle with a new vehicle of the same make, model, engine size, equipment level and paint type replace any modifications",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "new_replacement",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 18,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Storage costs",
+    "quote": "If we agree to pay your claim as a result of an incident and your vehicle is taken to a storage facility or holding yard: we will: pay the reasonable costs to store your vehicle from when you lodge a claim with us until we assess your vehicle. however: we must agree to pay the storage costs before you make any arrangements you need to move your vehicle if we ask you to we can move your vehicle if we need to.",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "storage_costs",
+        "score": 0.8
+      }
+    ]
+  },
+  {
+    "page": 18,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Personal items",
+    "quote": "If we agree to pay your claim as a result of an incident and personal items in your vehicle suffer loss or damage: we will: for all vehicles except motorcycles, pay up to $500 in total to repair or replace your personal items for motorcycles, pay up to $2,000 in total to repair or replace the protective clothing that is specifically designed to be worn by you or your passenger while riding your motorcycle. If you have a motorcycle, the most we pay for any one item of protective clothing is $1,000. Protective clothing includes: – helmet – jacket – trousers – boots – gloves.",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "personal_items",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 19,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Towing",
+    "quote": "If we agree to pay your claim as a result of an incident and your vehicle needs to be towed because it cannot be driven or is unsafe to drive: We pay this additional cover on top of your agreed or market value. we will: pay the reasonable cost to tow your vehicle from where the incident happened to whichever place we decide is closer: – a repairer or other place we recommend, or – a safe place. however: we only pay for one tow. If your vehicle needs to be towed more than once, we decide which tow to pay for.",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "towing",
+        "score": 0.85
+      }
+    ]
+  },
+  {
+    "page": 19,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Baby capsules & child seats",
+    "quote": "’ – see this page) tools of trade standard equipment, modifications, options or accessories that are attached to your vehicle. however: we cover your personal items if they are stolen as part of a theft or attempted theft of your vehicle. But, if they are stolen as part of any other incident we cover, then they must be stolen at the scene of the incident when it happens. Towing If we agree to pay your claim as a result of an incident and your vehicle needs to be towed because it cannot be driven or is unsafe to drive: We pay this additional cover on top of your agreed or market value. we will: pay the reasonable cost to tow your vehicle from where the incident happened to whichever place we decide is closer: – a repairer or other place we recommend, or – a safe place. however: we on",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "child_seats",
+        "score": 0.72
+      }
+    ]
+  },
+  {
+    "page": 20,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Trailer or caravan damage",
+    "quote": "If we agree to pay your claim and your trailer or caravan suffers loss or damage as a result of an incident while attached to or being towed by your vehicle: we will: pay up to $1,000 towards repairing or replacing your trailer or caravan. not covered: damage to the contents of the trailer or caravan.",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "trailer_damage",
+        "score": 0.72
+      }
+    ]
+  },
+  {
+    "page": 20,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Emergency repairs",
+    "quote": "If we agree to pay your claim and you have made emergency repairs to your vehicle as a result of an incident so you can get back on the road safely: we will: reimburse you up to $800 in total for emergency repairs to your vehicle. not covered: non-emergency repairs. however: we will determine what is an emergency repair the emergency repairs must be made to keep your vehicle secure or to get you back on the road safely you must pay for the emergency repairs up front and provide us with the receipts, unless we agree otherwise the emergency repairs must be directly related to the incident you are claiming for.",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "emergency_repairs",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 20,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Emergency transport and accommodation",
+    "quote": "If your vehicle is damaged and cannot be driven or used as a result of an incident we have agreed to cover under ‘Cover for loss or damage’ that occurs more than 100 kilometres from your home. We pay this additional cover on top of your agreed or market value. we will: pay up to $1,000 in total for the reasonable costs of: transportation for you, your passengers and your domestic pets to your home or, if we agree, to another destination, temporary accommodation for you, your passengers and your domestic pets covering the room rate only, and transportation of your vehicle from: the place your vehicle is repaired to your home, or the location of the incident to a repairer near your home. not covered: the costs of transporting any vehicle or other item being towed by your vehic",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "transport_accommodation",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 22,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Any Repairer option",
+    "quote": "If we agree to pay your claim as a result of an incident, we will arrange for an RACV Partner Repairer to fix your vehicle – see page 32. However, if you have chosen this option you may use any licensed repairer of your choice, including an RACV Partner Repairer – see page 32. Your choice of repairer must have all the necessary equipment, skills, capabilities, licences and authorisations required by law to complete the repairs to your vehicle.",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "any_repairer_option",
+        "score": 0.84
+      }
+    ]
+  },
+  {
+    "page": 21,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Hire Car option",
+    "quote": "Under Comprehensive Insurance: we pay hire car costs for up to 21 days after a theft or attempted theft – see page 10 we pay hire car costs after a collision with another vehicle where: we are satisfied you or your driver is not at fault for the collision, and you can give us the name and residential address of a person(s) we agree is at fault, and you need a hire car- see page 9. See ‘Determining fault in an incident’ on page 31. . If you add this option, for all other incidents we cover that cause loss or damage to your vehicle: we will: arrange a hire car for you and will do our best to arrange a car that meets your needs pay for the cost of a hire car up to a maximum of $60 per day: up to a maximum of 14 days, or until your vehicle is repaired, or until we pay your",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "hire_car_option",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 21,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "– Options",
+    "quote": "If you hold Comprehensive Insurance, you may add the following options to your Policy by paying any additional premium that applies. Any options you have chosen will be listed on your current Certificate of Insurance. Hire Car option Under Comprehensive Insurance: we pay hire car costs for up to 21 days after a theft or attempted theft – see page 10 we pay hire car costs after a collision with another vehicle where: we are satisfied you or your driver is not at fault for the collision, and you can give us the name and residential address of a person(s) we agree is at fault, and you need a hire car- see page 9. See ‘Determining fault in an incident’ on page 31.",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "policy_options",
+        "score": 0.85
+      }
+    ]
+  },
+  {
+    "page": 23,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Third Party Fire &  Theft Insurance",
+    "quote": "If you hold Third Party Fire & Theft Insurance we will provide cover as described on pages 16 to 19. Third Party Fire & Theft Insurance also includes the following cover described in the section ‘Cover for all types of insurance’. Liability cover for damage you cause someone else's property – see page 22 Legal representation – see page 23",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "fire_limit",
+        "score": 0.74
+      }
+    ]
+  },
+  {
+    "page": 23,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Cover for fire & theft loss or damage",
+    "quote": "We will cover loss or damage to your motor vehicle up to $10,000 caused by either of the following incidents: fire theft or attempted theft. we will decide whether to: repair your vehicle, or pay you the fair and reasonable cost of repairing your vehicle as determined by us, or pay you the market value less any applicable deductions (see page 35 for details). Our choice will have regard to the circumstances of your claim and consider any preference you may have. The most we will pay is $10,000.",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "fire_theft_loss",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 23,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Limited cover for accident damage to your vehicle",
+    "quote": "If you are not at fault in a collision we provide limited cover for the damage to your vehicle based upon whether the person at fault was: uninsured for the damage to your vehicle, or insured for the damage to your vehicle. Uninsured motorist damage We will provide you limited cover up to $5,000 for damage to your vehicle if: your vehicle is damaged in a collision with another vehicle, and we are satisfied the collision was the other driver's fault, and you can provide us with the registration of the other vehicle, and the name and residential address of the other driver, and the damage is more than the basic excess that applies to your Policy, and the driver of the other vehicle is uninsured for your damage.",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "accident_limited",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 24,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Any RACV Partner Repairer",
+    "quote": "Your Policy automatically includes access to RACV’s extensive partner repairer network. RACV has partnered with trusted businesses to deliver quality, safe repairs and have you back on the road as soon as possible. However, you may choose your own repairer to fix your vehicle. Your choice of repairer must have all the necessary equipment, skills, capabilities, licences and authorisations required by law to complete the repairs to your vehicle. 18 Third Party Fire & Theft See ‘Things that may affect cover’ on pages 24 to 27 for important policy exclusions that affect all cover. These are in addition to any limitations to cover described on pages 16 to 19. Third Party Fire & Theft Insurance – Additional cover If we agree to pay your claim for an incident described on pages 16 and 17",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "partner_network",
+        "score": 0.82
+      }
+    ]
+  },
+  {
+    "page": 26,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Emergency repairs",
+    "quote": "If we agree to pay your claim and you have made emergency repairs to your vehicle as a result of an incident: we will: reimburse you up to $800 in total for emergency repairs to your vehicle. not covered: non-emergency repairs. however: we will determine what is an emergency repair the repairs must be made to keep your vehicle secure or to get you back on the road safely you must pay for the emergency repairs up front and provide us with the receipts, unless we agree otherwise the emergency repairs must be directly related to the incident you are claiming for. Emergency transport and accommodation If your vehicle is damaged and cannot be driven or used as a result of an incident we have agreed to cover under ‘Cover for loss or damage’ that occurs more than 100 kilometres from your ho",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "urgent_repairs",
+        "score": 0.84
+      }
+    ]
+  },
+  {
+    "page": 26,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Storage costs",
+    "quote": "If we agree to pay your claim as a result of an incident and your vehicle is taken to a storage facility or holding yard: we will: pay the reasonable costs to store your vehicle from when you lodge a claim with us until we assess your vehicle. however: we must agree to pay the storage costs before you make any arrangements you need to move your vehicle if we ask you to we can move your vehicle if we need to. Emergency repairs If we agree to pay your claim and you have made emergency repairs to your vehicle as a result of an incident: we will: reimburse you up to $800 in total for emergency repairs to your vehicle. not covered: non-emergency repairs. however: we will determine what is an emergency repair the repairs must be made to keep your vehicle secure or to get you back on the",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "storage_fees",
+        "score": 0.83
+      }
+    ]
+  },
+  {
+    "page": 25,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Hire car after theft or attempted theft",
+    "quote": "If we agree to pay your claim as a result of theft or attempted theft of your vehicle and it cannot be driven or is unsafe to drive, we will pay for the cost of a hire car up to a maximum of $60 per day: up to a maximum of 21 days, or until your vehicle is recovered and repaired, or until we pay your claim if your vehicle is a total loss, whichever is the shortest period of time. we will: arrange a hire car for you and will do our best to arrange a car that meets your needs pay up to $2,000 in total for any excess and security bond payable under the hire car agreement because there is loss or damage to the hire car or it causes loss or damage. not covered: running costs of the hire car (for example, petrol or tolls) additional hire car costs (for example, any optional extras such as",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "theft_hire_limit",
+        "score": 0.84
+      }
+    ]
+  },
+  {
+    "page": 25,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Towing",
+    "quote": "If we agree to pay your claim as a result of an incident and your vehicle needs to be towed because it cannot be driven or is unsafe to drive: We pay this additional cover on top of your market value. we will: pay the reasonable cost to tow your vehicle from where the incident happened to whichever place we decide is closer: a repairer or other place we recommend, or a safe place. however: we only pay for one tow. If your vehicle needs to be towed more than once, we decide which tow to pay for. Hire car after theft or attempted theft If we agree to pay your claim as a result of theft or attempted theft of your vehicle and it cannot be driven or is unsafe to drive, we will pay for the cost of a hire car up to a maximum of 21 days: up to a maximum of 21 days, or until your vehic",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "single_tow",
+        "score": 0.83
+      }
+    ]
+  },
+  {
+    "page": 25,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "– Additional cover",
+    "quote": "If we agree to pay your claim for an incident described on pages 16 and 17 under the heading ‘Cover for fire & theft loss or damage’ or ‘Uninsured motorist damage’ or ‘Insured motorist damage’, you may be entitled to one or more of the following additional covers. Towing If we agree to pay your claim as a result of an incident and your vehicle needs to be towed because it cannot be driven or is unsafe to drive: We pay this additional cover on top of your market value. we will: pay the reasonable cost to tow your vehicle from where the incident happened to whichever place we decide is closer: a repairer or other place we recommend, or a safe place. however: we only pay for one tow. If your vehicle needs to be towed more than once, we decide which tow to pay for. Hire car after theft",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "add_cover_fire",
+        "score": 0.83
+      }
+    ]
+  },
+  {
+    "page": 27,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Third Party Property Damage Insurance",
+    "quote": "If you hold Third Party Property Damage Insurance we will provide cover as described on this page. Third Party Property Damage Insurance also includes the following cover described in the section ‘Cover for all types of insurance’: Liability cover for damage you cause someone else's property – see page 22 Legal representation – see page 23",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "third_party_property2",
+        "score": 0.74
+      }
+    ]
+  },
+  {
+    "page": 27,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Uninsured motorist damage",
+    "quote": "This provides limited cover for damage to your vehicle when you are not at fault in a collision (if you are at fault see ‘Liability cover for damage you cause someone else's property’ on page 22). we will provide you with limited cover up to $5,000 for loss or damage to your vehicle if: your vehicle is damaged in a collision with another vehicle, and the driver of the other vehicle is uninsured for the damage, and we are satisfied the collision was the other driver's fault, and you can provide us with the registration number of the other vehicle, and the name and residential address of the other driver, and the damage is more than the basic excess that applies to your Policy. See ‘Determining fault in an incident’ on page 31. we will decide whether to: repair your vehicle,",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "uninsured_damage",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 27,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Any RACV Partner Repairer",
+    "quote": "Your policy automatically includes access to RACV’s extensive partner repairer network. RACV has partnered with trusted businesses to deliver quality, safe repairs and have you back on the road as soon as possible. However, you may choose your own repairer to fix your vehicle (including motorcycles). Your choice of repairer must have all the necessary equipment, skills, capabilities, licences and authorisations required by law to complete the repairs to your vehicle. 21 Third Party Property Damage Third Party Property Damage Insurance",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "repairer_access",
+        "score": 0.82
+      }
+    ]
+  },
+  {
+    "page": 28,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Towing",
+    "quote": "If we agree to pay your claim as a result of an incident and your vehicle needs to be towed because it cannot be driven or is unsafe to drive: We pay this additional cover on top of your market value. we will: pay the reasonable cost to tow your vehicle from where the incident happened to whichever place we decide is closer: a repairer or other place we recommend, or a safe place. however: we only pay for one tow. If your vehicle needs to be towed more than once, we decide which tow to pay for. For examples of how we calculate a claim for Uninsured motorist damage, please see examples 1 and 5 in the Claim payment examples on pages 50 to 51.",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "tow_costs",
+        "score": 0.82
+      }
+    ]
+  },
+  {
+    "page": 29,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Cover for all types of Insurance",
+    "quote": "If you hold any type of insurance, we will provide cover as described in the following sections: Liability cover for damage you cause someone else's property - see this page Legal representation - see page 23",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "all_types_liab",
+        "score": 0.71
+      }
+    ]
+  },
+  {
+    "page": 29,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Liability cover for damage you cause to someone else's property",
+    "quote": "rty Under liability cover, we protect you if someone makes a claim against you for loss or damage to their property. For example, if you are at fault in an accident and damage someone’s vehicle. Who we will cover We will cover: you, or any driver, or any passenger, or your employer, including the government, your business partner or principal when: - you are using or are in charge of your vehicle as their employee, business partner or agent of the principal, or - you give permission for your vehicle to be used by another employee, business partner or agent of the principal. Your principal is a person with whom you have an express agreement to act as their agent. What we will cover We will cover the liability of a person we cover for any claim against them arising from loss or damage",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "third_party_liab",
+        "score": 0.8
+      }
+    ]
+  },
+  {
+    "page": 30,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Legal representation",
+    "quote": "If your vehicle is involved in an incident which results in you or a driver of the vehicle who has permission to drive your vehicle needing legal representation as a result of that incident: we will pay the reasonable costs of legal representation if you or that driver needs to be represented before a coroner conducting an inquiry we may choose to pay the reasonable costs of legal representation if you or that driver needs to be represented before a magistrate. The most we will pay for any legal representation is $10,000. not covered: any costs for legal representation relating to penalties, fines or awards of aggravated, exemplary or punitive damages, or any costs for legal representation where you, or the person who has your permission to use your vehicle have been charged with any o",
+    "candidates": [
+      {
+        "key": "coverage",
+        "value": "legal_representation",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 31,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Things that may affect cover",
+    "quote": "In some situations, we may not cover you at all or we may limit the cover we give you under your Policy. These are known as exclusions. We outline the exclusions in the following sections. General exclusions The exclusions shown on pages 24 to 26 apply to all cover under your Policy. These sections also apply to liability cover. Exclusions for liability cover The exclusions for liability cover are shown under ‘When you are not entitled to liability cover’ on page 23. Other exclusions Throughout this booklet, we outline other exclusions that apply to specific situations and the limits on your cover. Your responsibilities when you are insured with us and when you make a claim When you are insured with us and when you need to make a claim, you must meet certain responsibilities.",
+    "candidates": [
+      {
+        "key": "exclusions",
+        "value": "policy_limits",
+        "score": 0.83
+      }
+    ]
+  },
+  {
+    "page": 31,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "General exclusions",
+    "quote": "The exclusions shown on pages 24 to 26 apply to all cover under your Policy. These sections also apply to liability cover. Exclusions for liability cover The exclusions for liability cover are shown under ‘When you are not entitled to liability cover’ on page 23. Other exclusions Throughout this booklet, we outline other exclusions that apply to specific situations and the limits on your cover. Your responsibilities when you are insured with us and when you make a claim When you are insured with us and when you need to make a claim, you must meet certain responsibilities. We outline your responsibilities on pages 27 and 29. General exclusions The exclusions on this page and pages 24 to 25 apply to all cover under your Policy. not covered: loss or damage that occurs outside Australia loss",
+    "candidates": [
+      {
+        "key": "exclusions",
+        "value": "global_exclusions",
+        "score": 0.84
+      }
+    ]
+  },
+  {
+    "page": 33,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Driving under the influence of alcohol or drugs",
+    "quote": "If, at the time of an incident, the driver of your vehicle or a substitute vehicle: was under the influence of any alcohol or drug; or had a blood alcohol level higher than the level permitted by law we will refuse any claim unless: you were not the driver and you can satisfy us you had no reason to suspect that the driver was affected by alcohol or any drug. Even if we agree to pay your claim for loss or damage to your vehicle, the driver will have no liability cover and we may seek recovery of an amount from this driver.",
+    "candidates": [
+      {
+        "key": "exclusions",
+        "value": "dui_exclusion",
+        "score": 0.86
+      }
+    ]
+  },
+  {
+    "page": 23,
+    "source_file": "RACV motor-insurance-pds-current.pdf",
+    "section": "Third Party Fire & Theft Insurance",
+    "quote": "If you hold Third Party Fire & Theft Insurance we will provide cover as described on pages 16 to 19. Third Party Fire & Theft Insurance also includes the following cover described in the section ‘Cover for all types of insurance’. \u0007Liability cover for damage you cause someone else's property – see page 22 \u0007Legal representation – see page 23",
+    "candidates": [
+      {
+        "key": "topic",
+        "value": "third party",
+        "score": 0.01
+      }
+    ]
+  }
+]

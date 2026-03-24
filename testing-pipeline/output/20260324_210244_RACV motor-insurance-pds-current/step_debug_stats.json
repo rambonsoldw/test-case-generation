@@ -1,0 +1,17 @@
+{
+  "topics": 102,
+  "base_questions": 306,
+  "final_rows": 612,
+  "runtime_seconds": 602.3865647315979,
+  "quality_metrics": {
+    "unanswered_rate_pct": 1.63,
+    "unanswered_count": 10,
+    "mean_base_variant_similarity": 0.9083
+  },
+  "llm_usage": {
+    "llm_calls": 510,
+    "total_input_tokens": 251630,
+    "total_output_tokens": 281619,
+    "total_tokens": 533249
+  }
+}

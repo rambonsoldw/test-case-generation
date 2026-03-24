@@ -1,0 +1,8 @@
+{
+  "qa_with_at_least_1_tag": 612,
+  "total_qa": 612,
+  "qa_tagged_pct": 100.0,
+  "unique_tag_pairs_from_step1": 98,
+  "unique_tag_pairs_used_in_step3": 97,
+  "tag_pairs_used_pct": 98.98
+}

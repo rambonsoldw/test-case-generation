@@ -357,6 +357,11 @@ def _derive_value_1_2_words(section: str, quote: str) -> str:
     return val
 
 # ---------------- Tagging function ----------------
+def _sanitize_text(s: str) -> str:
+    """Strip null bytes and ASCII control characters (except tab/newline) from text."""
+    return re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]", "", s)
+
+
 def tag_document_global_with_llm(
     client: OpenAI,
     model: str,
@@ -373,11 +378,11 @@ def tag_document_global_with_llm(
         compact_entries.append({
             "original_page": e.get("original_page", -1),
             "source_file": e.get("source_file", "document"),
-            "section": (e.get("section") or "(section)")[:180],
-            "quote": (e.get("quote") or "")[:MAX_QUOTE]
+            "section": _sanitize_text((e.get("section") or "(section)")[:180]),
+            "quote": _sanitize_text((e.get("quote") or "")[:MAX_QUOTE])
         })
 
-    index_json = json.dumps(compact_entries, ensure_ascii=False)
+    index_json = json.dumps(compact_entries, ensure_ascii=True)
 
     if "insurance" in industry:
         example_keys = "coverage,exclusions,claims_process,premiums,deductibles,limitations"

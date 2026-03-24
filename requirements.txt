@@ -1,0 +1,13 @@
+# pipeline.py
+pyyaml==6.0.3
+
+# nodetree_generate.py
+openai==2.24.0
+pymupdf==1.27.2.2
+pageindex==0.2.8
+
+# testcase_generate.py
+pandas==3.0.1
+numpy==2.4.3
+scikit-learn==1.8.0
+sentence-transformers==5.3.0

@@ -7,8 +7,7 @@
 # ============================================================
 
 defaults:
-  model: gpt-4o-mini
-  industry: education
+  model: gpt-5-mini
   base_questions_per_topic: 3
   variations: 2
   workers: 8
@@ -17,12 +16,14 @@ defaults:
   import_flag: false
 
 documents:
-  - input: /path/to/document1.pdf
+  - input: ./documents/RACV motor-insurance-pds-current.pdf
+    industry: insurance
 
-  - input: /path/to/document2.pdf
-    industry: insurance             # override industry for this doc
+  - input: ./documents/member-guide.pdf
+    industry: health
 
-  - input: /path/to/document3.pdf
-    base_questions_per_topic: 5     # more questions for this doc
-    variations: 3
-    import_flag: true
+  - input: ./documents/bupa-fund-rules-full.pdf
+    industry: insurance
+
+  - input: ./documents/black-60-extras-updated 2.pdf
+    industry: health
