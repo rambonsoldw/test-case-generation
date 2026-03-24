@@ -17,7 +17,6 @@ import re
 import json
 import argparse
 import time
-import csv
 import concurrent.futures
 from typing import Any, Dict, List, Tuple
 # minimal deps used by tagging (no heavy imports here)
@@ -219,7 +218,7 @@ def compute_and_write_ingestion_metrics(
     filtered_entries: List[Dict[str, Any]]
 ):
     """
-    Computes hierarchical extraction metrics and writes them to CSV.
+    Computes hierarchical extraction metrics and writes them to JSON.
     Excludes RAG readiness score (handled separately).
     """
     # ---- Page Count (unique pages in full flattened entries) ----
@@ -267,33 +266,23 @@ def compute_and_write_ingestion_metrics(
         if original_word_count > 0 else 0.0
     )
 
-    # ---- Write CSV ----
-    csv_path = os.path.join(out_dir, "document_ingestion_metrics.csv")
+    # ---- Write JSON ----
+    json_path = os.path.join(out_dir, "document_ingestion_metrics.json")
 
-    fieldnames = [
-        "document_name",
-        "page_count",
-        "original_word_count",
-        "node_tree_word_count",
-        "topic_count",
-        "topic_coverage_ratio",
-        "compression_rate"
-    ]
+    metrics = {
+        "document_name": document_name,
+        "page_count": page_count,
+        "original_word_count": original_word_count,
+        "node_tree_word_count": node_tree_word_count,
+        "topic_count": topic_count,
+        "topic_coverage_ratio": round(topic_coverage_ratio, 4),
+        "compression_rate": round(compression_rate, 4)
+    }
 
-    with open(csv_path, "w", newline="", encoding="utf-8") as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerow({
-            "document_name": document_name,
-            "page_count": page_count,
-            "original_word_count": original_word_count,
-            "node_tree_word_count": node_tree_word_count,
-            "topic_count": topic_count,
-            "topic_coverage_ratio": round(topic_coverage_ratio, 4),
-            "compression_rate": round(compression_rate, 4)
-        })
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(metrics, f, ensure_ascii=False, indent=2)
 
-    print(f"[INFO] Wrote ingestion metrics CSV to: {csv_path}")
+    print(f"[INFO] Wrote ingestion metrics to: {json_path}")
 
 # ---------------- Tagging prompts ----------------
 SYSTEM_TAG_GLOBAL = (
