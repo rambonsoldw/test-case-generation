@@ -61,7 +61,7 @@ _TESTCASE_SCRIPT = _REPO_ROOT / "test-case-creation"   / "testcase_generate.py"
 
 # ---- Defaults ----
 DEFAULT_ARGS: Dict[str, Any] = {
-    "model":                    "gpt-4o-mini",
+    "model":                    "gpt-5-mini",
     "industry":                 "",
     "base_questions_per_topic": 3,
     "variations":               2,
