@@ -596,7 +596,7 @@ def main():
     ap.add_argument("--model", default="gpt-5-mini")
     ap.add_argument("--base_questions_per_topic", type=int, required=True)
     ap.add_argument("--variations", type=int, required=True)
-    ap.add_argument("--workers", type=int, default=8)
+    ap.add_argument("--workers", type=int, default=20)
     ap.add_argument("--debug", action="store_true")
     ap.add_argument("--import_flag", dest="import_flag", action="store_true")
     args = ap.parse_args()
@@ -765,13 +765,23 @@ def main():
     # Values near 1.0 = variants too similar; near 0.0 = variants may have drifted in meaning
     _bv_sims: List[float] = []
     if rewrites_needed > 0:
+        _bv_base_qs: List[str] = []
+        _bv_all_variants: List[str] = []
+        _bv_counts: List[int] = []
         for i, b in enumerate(answered_base_items):
             rewrites = variant_results[i] or []
             if not rewrites:
                 continue
-            base_emb = _embed_norm(sbert_model, [b["question"]])
-            var_embs = _embed_norm(sbert_model, rewrites)
-            _bv_sims.extend((base_emb[0] @ var_embs.T).tolist())
+            _bv_base_qs.append(b["question"])
+            _bv_all_variants.extend(rewrites)
+            _bv_counts.append(len(rewrites))
+        if _bv_base_qs:
+            _base_embs = _embed_norm(sbert_model, _bv_base_qs)
+            _var_embs  = _embed_norm(sbert_model, _bv_all_variants)
+            _var_offset = 0
+            for bi, count in enumerate(_bv_counts):
+                _bv_sims.extend((_base_embs[bi] @ _var_embs[_var_offset:_var_offset + count].T).tolist())
+                _var_offset += count
     mean_base_variant_sim = round(float(np.mean(_bv_sims)), 4) if _bv_sims else None
 
     # ---------------- Tag merging and SBERT attach ----------------

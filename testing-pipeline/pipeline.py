@@ -65,7 +65,7 @@ DEFAULT_ARGS: Dict[str, Any] = {
     "industry":                 "",
     "base_questions_per_topic": 3,
     "variations":               2,
-    "workers":                  8,
+    "workers":                  20,
     "max_pageindex_pages":      300,
     "debug":                    False,
     "import_flag":              False,
