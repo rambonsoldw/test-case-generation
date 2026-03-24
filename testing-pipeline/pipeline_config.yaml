@@ -1,0 +1,28 @@
+# ============================================================
+# pipeline_config.yaml
+#
+# Global defaults apply to every document unless overridden.
+# Per-document entries only need an 'input' field at minimum.
+# Any default can be overridden on a per-document basis.
+# ============================================================
+
+defaults:
+  model: gpt-4o-mini
+  industry: education
+  base_questions_per_topic: 3
+  variations: 2
+  workers: 8
+  max_pageindex_pages: 300
+  debug: false
+  import_flag: false
+
+documents:
+  - input: /path/to/document1.pdf
+
+  - input: /path/to/document2.pdf
+    industry: insurance             # override industry for this doc
+
+  - input: /path/to/document3.pdf
+    base_questions_per_topic: 5     # more questions for this doc
+    variations: 3
+    import_flag: true
