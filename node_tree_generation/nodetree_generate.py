@@ -215,7 +215,8 @@ def compute_and_write_ingestion_metrics(
     out_dir: str,
     document_name: str,
     index_entries: List[Dict[str, Any]],
-    filtered_entries: List[Dict[str, Any]]
+    filtered_entries: List[Dict[str, Any]],
+    ingestion_model: str = "unknown"
 ):
     """
     Computes hierarchical extraction metrics and writes them to JSON.
@@ -271,6 +272,7 @@ def compute_and_write_ingestion_metrics(
 
     metrics = {
         "document_name": document_name,
+        "ingestion_model": ingestion_model,
         "page_count": page_count,
         "original_word_count": original_word_count,
         "node_tree_word_count": node_tree_word_count,
@@ -659,7 +661,7 @@ def _extract_page_chunks(pdf_path: str) -> List[Dict[str, Any]]:
 
 
 # ---------------- Helper: load_or_convert_pageindex (copied) ----------------
-def load_or_convert_pageindex(input_path: str, out_dir: str, debug: bool=False, max_pageindex_pages: int=300) -> Tuple[str, Any]:
+def load_or_convert_pageindex(input_path: str, out_dir: str, debug: bool=False, max_pageindex_pages: int=300) -> Tuple[str, Any, str]:
     """
     Hybrid loader:
 
@@ -706,7 +708,7 @@ def load_or_convert_pageindex(input_path: str, out_dir: str, debug: bool=False, 
 
                 print(f"[INFO] PyMuPDF tree written to: {out_json_path}")
 
-                return out_json_path, pi_like_dict
+                return out_json_path, pi_like_dict, "pymupdf"
 
         # ---- Fallback to PageIndex (guarded by page count) ----
         page_count = _pdf_page_count(path)
@@ -721,7 +723,7 @@ def load_or_convert_pageindex(input_path: str, out_dir: str, debug: bool=False, 
             with open(out_json_path, "w", encoding="utf-8") as f:
                 json.dump(chunks, f, ensure_ascii=False, indent=2)
             print(f"[INFO] Page-chunk tree written to: {out_json_path}")
-            return out_json_path, chunks
+            return out_json_path, chunks, "manual_fallback"
 
         if PageIndexClient is None:
             raise SystemExit(
@@ -788,7 +790,7 @@ def load_or_convert_pageindex(input_path: str, out_dir: str, debug: bool=False, 
                     json.dump(tree, f, ensure_ascii=False, indent=2)
 
                 print(f"[INFO] PageIndex tree written to: {out_json_path}")
-                return out_json_path, tree
+                return out_json_path, tree, "pageindex"
 
             if status == "failed":
                 raise SystemExit(f"PageIndex processing failed: {tree_result!r}")
@@ -799,7 +801,7 @@ def load_or_convert_pageindex(input_path: str, out_dir: str, debug: bool=False, 
     with open(path, "r", encoding="utf-8") as f:
         pi = json.load(f)
 
-    return path, pi
+    return path, pi, "json"
 
 
 # ---------------- Main for preprocessing ----------------
@@ -820,7 +822,7 @@ def main():
     client = make_client()
 
     # Convert or load
-    pi_path, pi_tree = load_or_convert_pageindex(input_path, args.out_dir, args.debug, max_pageindex_pages=args.max_pageindex_pages)
+    pi_path, pi_tree, ingestion_model = load_or_convert_pageindex(input_path, args.out_dir, args.debug, max_pageindex_pages=args.max_pageindex_pages)
     # Flatten
     default_src = os.path.splitext(os.path.basename(pi_path))[0] + ".json"
     index_entries = flatten_pageindex_root(pi_tree, max_items=None, default_source=default_src)
@@ -887,7 +889,8 @@ def main():
         out_dir=args.out_dir,
         document_name=document_name,
         index_entries=index_entries,
-        filtered_entries=filtered
+        filtered_entries=filtered,
+        ingestion_model=ingestion_model
     )
 
     print("[DONE] document_preprocess completed.")
